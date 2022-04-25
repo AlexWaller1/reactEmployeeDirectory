@@ -7,32 +7,42 @@ function App() {
 
   const [employees, setEmployees] = useState([]);
 
+  let apiData = []
+
+  useEffect(() => {
+    const getEmployees = async () => {
+    const apiEmployees = await fetchEmployees();
+
+    setEmployees(apiEmployees);
+    }
+    getEmployees();
+    console.log("getEmployees");
+  }, [])
+
   const fetchEmployees = async () => {
+     
 
      const res = await fetch("https://randomuser.me/api/?results=10");
 
      const data = await res.json();
 
-     console.log(data["results"].length);
+     return data["results"];
 
-     let randomId = Math.floor(Math.random() * 50000);
-
-     let i = 0;
-
-     let apiData = [];
-
-     for (; i < data["results"].length; i++) {
-       let newEmployee = {
-         id: randomId,
-         firstName: data["results"][i].name.first,
-         lastName: data["results"][i].name.last
-       };
-       apiData.push(newEmployee);
-     }
      
-    console.log(apiData)
+
+    
+     
+ 
      
   }
+
+  fetchEmployees();
+
+  console.log(employees);
+
+  
+
+
 
   
 
