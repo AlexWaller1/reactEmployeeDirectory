@@ -1,8 +1,8 @@
 import React from 'react'
 
- const SortButton = ({text}) => {
+ const SortButton = ({text, sortEmployees}) => {
   return (
-    <button className='btn btn-primary'>{text}</button>
+    <button className='btn btn-primary' onClick={sortEmployees}>{text}</button>
   )
 }
 
