@@ -40,7 +40,9 @@ function App() {
 
   console.log(employees);
 
-  
+  const sortEmployees = () => {
+    console.log("employees sorted");
+  }
 
 
 
@@ -50,7 +52,7 @@ function App() {
 
   return (
     <div className="App">
-     <EmployeeDiv />
+     <EmployeeDiv  employees={employees} sortEmployees={sortEmployees}/>
     </div>
   );
 }

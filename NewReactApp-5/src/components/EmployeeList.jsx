@@ -1,8 +1,11 @@
 import React from 'react'
 
- const EmployeeList = () => {
+ const EmployeeList = ( { employees }) => {
   return (
-    <div></div>
+    <ul id="employee-list">
+        {employees.map(e1 => 
+            <h3 key={e1.phone}>{`${e1.name.first} ${e1.name.last}`}</h3>)}
+    </ul>
   )
 }
 

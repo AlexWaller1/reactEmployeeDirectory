@@ -3,12 +3,12 @@ import Header from './Header';
 import SortButton from './SortButton';
 import EmployeeList from './EmployeeList';
 
- const EmployeeDiv = () => {
+ const EmployeeDiv = ({ employees }) => {
   return (
     <div>
         <Header  text="Employee Directory"/>
         <SortButton text="Sort Employees"/>
-        <EmployeeList />
+        <EmployeeList employees={employees}/>
     </div>
   )
 }
