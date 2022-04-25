@@ -5,7 +5,11 @@ import EmployeeList from './EmployeeList';
 
  const EmployeeDiv = () => {
   return (
-    <div></div>
+    <div>
+        <Header  text="Employee Directory"/>
+        <SortButton text="Sort Employees"/>
+        <EmployeeList />
+    </div>
   )
 }
 
