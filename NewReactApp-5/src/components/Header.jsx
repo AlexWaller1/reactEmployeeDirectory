@@ -1,7 +1,11 @@
 import React from 'react'
+import  SortButton  from './SortButton';
 
-export const Header = () => {
+ const Header = ({ text }) => {
   return (
-    <div>Header</div>
+    <h1>{text}</h1>
+   
   )
 }
+
+export default Header;

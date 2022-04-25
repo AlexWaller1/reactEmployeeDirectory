@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const EmployeeList = () => {
+ const EmployeeList = () => {
   return (
     <div>EmployeeList</div>
   )
 }
+
+export default EmployeeList;

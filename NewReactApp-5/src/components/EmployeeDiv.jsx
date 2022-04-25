@@ -1,7 +1,12 @@
 import React from 'react'
+import Header from './Header';
+import SortButton from './SortButton';
+import EmployeeList from './EmployeeList';
 
-export const EmployeeDiv = () => {
+ const EmployeeDiv = () => {
   return (
-    <div>EmployeeDiv</div>
+    <div></div>
   )
 }
+
+export default EmployeeDiv;

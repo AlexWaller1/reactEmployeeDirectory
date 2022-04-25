@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const SortButton = () => {
+ const SortButton = () => {
   return (
     <div>SortButton</div>
   )
 }
+
+export default SortButton;
