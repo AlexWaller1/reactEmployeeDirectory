@@ -4,6 +4,35 @@ import { useState, useEffect } from 'react';
 import  EmployeeDiv  from './components/EmployeeDiv';
 
 function App() {
+
+  const fetchEmployees = async () => {
+
+     const res = await fetch("https://randomuser.me/api/?results=10");
+
+     const data = await res.json();
+
+     console.log(data["results"][0].name.first);
+
+     let randomId = Math.floor(Math.random() * 50000);
+
+     let i = 0;
+
+     let apiData = [];
+
+     for (; i < data["results"].length; i++) {
+       let newEmployee = {
+         id: randomId,
+         firstName: data["results"][i].name.first,
+         lastName: data["results"][i].name.last
+       };
+
+     }
+
+     
+  }
+
+  fetchEmployees();
+
   return (
     <div className="App">
      <EmployeeDiv />
