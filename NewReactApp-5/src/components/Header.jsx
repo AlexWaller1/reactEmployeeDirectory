@@ -3,7 +3,7 @@ import  SortButton  from './SortButton';
 
  const Header = ({ text }) => {
   return (
-    <h1>{text}</h1>
+    <h1 id="employee-directory-header">{text}</h1>
    
   )
 }
