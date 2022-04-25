@@ -42,6 +42,10 @@ function App() {
 
   const sortEmployees = () => {
     console.log("employees sorted");
+
+    employees.sort((a, b) => a.name.last > b.name.last ? 1 : -1);
+
+    setEmployees([...employees]);
   }
 
 
